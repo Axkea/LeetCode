@@ -29,18 +29,18 @@ public class LRUCache {
     public void put(int key, int value) {
         LRUNode lruNode = map.get(key);
         if (lruNode==null){
+            if (list.size()==capacity){
+                Integer integer = list.removeLast();
+                map.remove(integer);
+            }
             LRUNode node=new LRUNode(key,value);
             map.put(key,node);
             list.push(key);
-        }else{
+        }else {
             lruNode.setVal(value);
-            Integer keyI=key;
+            Integer keyI = key;
             list.remove(keyI);
             list.push(keyI);
-        }
-        if (list.size()>capacity){
-            Integer integer = list.removeLast();
-            map.remove(integer);
         }
     }
 

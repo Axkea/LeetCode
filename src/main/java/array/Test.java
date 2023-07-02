@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
-        S45Solution solution=new S45Solution();
+        L189Solution solution=new L189Solution();
         int[] data={3,30,34,5,9};
-        System.out.println(solution.minNumber(data));
+        solution.rotate(data,12);
+        System.out.println(Arrays.toString(data));
     }
 }
