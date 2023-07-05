@@ -16,8 +16,11 @@ public class Test {
 //        for (char[] chars:test){
 //            System.out.println(Arrays.toString(chars));
 //        }
-        L329Solution test=new L329Solution();
-        int[][] data={{9,9,4},{6,6,8},{2,1,1}};
-        System.out.println(test.longestIncreasingPath(data));
+//        L329Solution test=new L329Solution();
+//        int[][] data={{9,9,4},{6,6,8},{2,1,1}};
+//        System.out.println(test.longestIncreasingPath(data));
+        L210Solution solution=new L210Solution();
+        int[][] prerequisites={{1,0}};
+        System.out.println(Arrays.toString(solution.findOrder(2, prerequisites)));
     }
 }
