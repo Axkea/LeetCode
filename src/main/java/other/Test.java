@@ -11,7 +11,8 @@ public class Test {
 //       while(!heap.isEmpty()){
 //           System.out.println(heap.poll());
 //       }
-        L13Solution solution=new L13Solution();
-        System.out.println(solution.romanToInt("LIV"));
+//        L13Solution solution=new L13Solution();
+//        System.out.println(solution.romanToInt("LIV"));
+        System.out.println(new L38Solution().countAndSay(4));
     }
 }
