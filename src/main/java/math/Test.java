@@ -10,6 +10,7 @@ public class Test {
 //        res>>>=1;
 //        System.out.println(res);
 //        System.out.println(4&1);
-        System.out.println(new QuickMult().multiplication(2.4, 5));
+//        System.out.println(new QuickMult().multiplication(2.4, 5));
+        System.out.println(new L43Solution().multiply("2", "3"));
     }
 }
