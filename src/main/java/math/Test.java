@@ -11,6 +11,7 @@ public class Test {
 //        System.out.println(res);
 //        System.out.println(4&1);
 //        System.out.println(new QuickMult().multiplication(2.4, 5));
-        System.out.println(new L43Solution().multiply("2", "3"));
+//        System.out.println(new L43Solution().multiply("2", "3"));
+        System.out.println(new L60Solution().getPermutation(3, 3));
     }
 }

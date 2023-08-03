@@ -22,8 +22,10 @@ public class Test {
 //        S11Solution solution=new S11Solution();
 //        int[] data={3,3,1,3};
 //        System.out.println(solution.minArray(data));
-        M1003Solution solution=new M1003Solution();
-        int[] data={15,16,19,20,25,1,3,4,5,7,10,14};
-        System.out.println(solution.search(data, 5));
+//        M1003Solution solution=new M1003Solution();
+//        int[] data={15,16,19,20,25,1,3,4,5,7,10,14};
+//        System.out.println(solution.search(data, 5));
+        int[][] data={{1,1}};
+        System.out.println(new L74Solution().searchMatrix(data, 2));
     }
 }

@@ -13,6 +13,7 @@ public class Test {
 //       }
 //        L13Solution solution=new L13Solution();
 //        System.out.println(solution.romanToInt("LIV"));
-        System.out.println(new L38Solution().countAndSay(4));
+//        System.out.println(new L38Solution().countAndSay(4));
+        System.out.println(new L60Solution().getPermutation(4, 6));
     }
 }
