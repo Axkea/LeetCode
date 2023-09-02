@@ -18,8 +18,18 @@ public class Test {
         head4.next=head5;
         head5.next=head6;
         head6.next=head7;
-        L86Solution solution=new L86Solution();
-        solution.partition(head1,3);
+//        L86Solution solution=new L86Solution();
+//        solution.partition(head1,3);
 //        solution.reverse(head1);
+        ListNode pre=null;
+        ListNode next;
+        ListNode point=head1;
+        while (point!=null){
+            next=point.next;
+            point.next=pre;
+            pre=point;
+            point=next;
+        }
+        System.out.println(pre);
     }
 }
