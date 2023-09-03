@@ -12,11 +12,11 @@ public class Traverse {
         TreeNode point=root;
         while(!stack.isEmpty()||point!=null){
             if (point!=null){
+                System.out.println(point.val);
                 stack.push(point);
                 point=point.left;
             }else {
                 point=stack.pop();
-                System.out.println(point.val);
                 point=point.right;
             }
         }

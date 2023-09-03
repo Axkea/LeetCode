@@ -8,7 +8,7 @@ public class L11Solution {
             if (height[left]>height[right]){
                 area=height[right]*(right-left);
                 maxArea=Math.max(maxArea,area);
-                right++;
+                right--;
             }else {
                 area=height[left]*(right-left);
                 maxArea=Math.max(maxArea,area);
