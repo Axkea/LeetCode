@@ -4,6 +4,7 @@ import backtrack.S34Solution;
 
 import java.util.Deque;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.ReentrantLock;
@@ -20,8 +21,13 @@ public class Test {
 //        Traverse.nbt_right(node4);
 //        TreeNode node1=new TreeNode(Integer.MIN_VALUE);
 //        System.out.println(new L98Solution().isValidBST(node1));
-        ReentrantLock lock=new ReentrantLock();
-        lock.lock();
+//        ReentrantLock lock=new ReentrantLock();
+//        lock.lock();
+//        int[] inorder={9,3,15,20,7};
+//        int[] postorder={9,15,7,20,3};
+//        TreeNode node = new L106Solution().buildTree(inorder, postorder);
+//        System.out.println(node);
+        testL107();
     }
     public static void pre(TreeNode root){
         TreeNode pointer=root;
@@ -50,5 +56,16 @@ public class Test {
                 pointer=pointer.right;
             }
         }
+    }
+    private static void testL107(){
+        TreeNode node1=new TreeNode(1);
+        TreeNode node3=new TreeNode(3);
+        TreeNode node5=new TreeNode(5);
+        TreeNode node7=new TreeNode(7);
+        TreeNode node2=new TreeNode(2,node1,node3);
+        TreeNode node6=new TreeNode(6,node5,node7);
+        TreeNode node4=new TreeNode(4,node2,node6);
+        List<List<Integer>> lists = new L107Solution().levelOrderBottom(node4);
+        System.out.println(lists);
     }
 }
