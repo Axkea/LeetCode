@@ -27,7 +27,11 @@ public class Test {
 //        int[] postorder={9,15,7,20,3};
 //        TreeNode node = new L106Solution().buildTree(inorder, postorder);
 //        System.out.println(node);
-        testL107();
+//        testL107();
+        TreeNode node2=new TreeNode(2);
+        TreeNode node3=new TreeNode(3);
+        TreeNode node1=new TreeNode(1,node2,node3);
+        testL129(node1);
     }
     public static void pre(TreeNode root){
         TreeNode pointer=root;
@@ -67,5 +71,13 @@ public class Test {
         TreeNode node4=new TreeNode(4,node2,node6);
         List<List<Integer>> lists = new L107Solution().levelOrderBottom(node4);
         System.out.println(lists);
+    }
+    private static void testL124(){
+        TreeNode node=new TreeNode(-3);
+        int i = new L124Solution().maxPathSum(node);
+        System.out.println(i);
+    }
+    private static void testL129(TreeNode root){
+        System.out.println(new L129Solution().sumNumbers(root));
     }
 }
