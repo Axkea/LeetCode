@@ -11,6 +11,7 @@ public class L47Solution1 {
         List<Integer> iList=new ArrayList<>();
         vis=new boolean[nums.length];
         Arrays.sort(nums);
+        backTrace(nums,iList);
         return res;
     }
     private void backTrace(int[] nums,List<Integer> iList){

@@ -1,5 +1,7 @@
 package binary;
 
+import java.util.HashMap;
+
 public class L67Solution {
     public String addBinary(String a, String b) {
         StringBuilder builder=new StringBuilder();

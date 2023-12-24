@@ -78,4 +78,21 @@ public class SortREW {
         nums[j]=nums[i]^nums[j];
         nums[i]=nums[i]^nums[j];
     }
+
+    public static void quickSort2(int[] nums,int start,int end){
+        if (start<end){
+            int index=start,key=nums[start];
+            for (int i = start+1; i <= end ; i++) {
+                if (nums[i]<key){
+                    int temp=nums[i];
+                    nums[i]=nums[++index];
+                    nums[index]=temp;
+                }
+            }
+            nums[start]=nums[index];
+            nums[index]=key;
+            quickSort2(nums, start, index-1);
+            quickSort2(nums, index+1, end);
+        }
+    }
 }

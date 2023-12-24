@@ -4,36 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class L22Solution {
+    private List<String> res=new ArrayList<>();
     public List<String> generateParenthesis(int n) {
-        List<String> sList=new ArrayList<>();
-        backTrace(n,new StringBuilder("("),1,0,sList);
-        return sList;
+        backTrance(new StringBuilder(),0,0,n);
+        return res;
     }
-    public void backTrace(int n,StringBuilder res,int left,int right,List<String> sList){
-        if(res.length()==2*n){
-            sList.add(new String(res));
-            return;
+    private void backTrance(StringBuilder sb,int left,int right,int n){
+        if(sb.length()==2*n){
+            res.add(sb.toString());
         }
-        if(left==n){
-            res.append(")");
-            backTrace(n,res,left,right+1,sList);
-            res.deleteCharAt(res.length()-1);
-        }else if(left==right){
-            res.append("(");
-            backTrace(n,res,left+1,right,sList);
-            res.deleteCharAt(res.length()-1);
-        }else {
-            for (int i = 0; i < 2; i++) {
-                if (i==0){
-                    res.append("(");
-                    backTrace(n,res,left+1,right,sList);
-                    res.deleteCharAt(res.length()-1);
-                }else{
-                    res.append(")");
-                    backTrace(n,res,left,right+1,sList);
-                    res.deleteCharAt(res.length()-1);
-                }
-            }
+        if(left<n){
+            sb.append("(");
+            backTrance(sb,left+1,right,n);
+            sb.deleteCharAt(sb.length()-1);
+        }
+        if(right<left){
+            sb.append(")");
+            backTrance(sb,left,right+1,n);
+            sb.deleteCharAt(sb.length()-1);
         }
     }
 }
